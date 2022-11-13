@@ -4,12 +4,14 @@ const generateTeam = (team) => {
 // function generating html card for manager
 function generateManager(manager) {
 return `
-<div class="card" style="width: 18rem;">
+<div class="card employee-card" style="width: 18rem;">
+  <div class="card-header">
+    <h3 class="card-title">${manager.name}</h3>
+    <h4 class="card-text">${manager.getRole()}</h4>
+  </div>
   <div class="card-body">
-    <h5 class="card-title">${manager.name}</h5>
-    <p class="card-text">${manager.getRole()}</p>
     <p class="card-text">ID: ${manager.id}</p>
-    <p class="card-text">Email: ${manager.email}</p>
+    <p class="card-text">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
     <p class="card-text">Office Number: ${manager.officeNumber}</p>
   </div>
 </div>
@@ -19,12 +21,14 @@ return `
 // function generating html card for engineer
 function generateEngineer(engineer) {
 return `
-<div class="card" style="width: 18rem;">
+<div class="card employee-card" style="width: 18rem;">
+  <div class="card-header">
+    <h3 class="card-title">${engineer.name}</h3>
+    <h4 class="card-text">${engineer.getRole()}</h4>
+  </div>
   <div class="card-body">
-    <h5 class="card-title">${engineer.name}</h5>
-    <p class="card-text">${engineer.getRole()}</p>
     <p class="card-text">ID: ${engineer.id}</p>
-    <p class="card-text">Email: ${engineer.email}</p>
+    <p class="card-text">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
     <p class="card-text">GitHub: ${engineer.getGithub()}</p>
   </div>
 </div>
@@ -34,19 +38,21 @@ return `
 // function generating html card for intern
 function generateIntern(intern) {
 return `
-  <div class="card" style="width: 18rem;">
+  <div class="card employee-card" style="width: 18rem;">
+    <div class="card-header">
+      <h3 class="card-title">${intern.name}</h3>
+      <h4 class="card-text">${intern.getRole()}</h4>
+    </div>
     <div class="card-body">
-      <h5 class="card-title">${intern.name}</h5>
-      <p class="card-text">${intern.getRole()}</p>
       <p class="card-text">ID: ${intern.id}</p>
-      <p class="card-text">Email: ${intern.email}</p>
+      <p class="card-text">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
       <p class="card-text">School: ${intern.school}</p>
     </div>
   </div>
   `;
 }
 
-
+// push, filter and map answers to separate cards
 const html = [];
 
 html.push(
@@ -83,7 +89,6 @@ return `
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 <body>
   <div class="container-fluid">
