@@ -29,7 +29,7 @@ return `
   <div class="card-body">
     <p class="card-text">ID: ${engineer.id}</p>
     <p class="card-text">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-    <p class="card-text">GitHub: ${engineer.getGithub()}</p>
+    <p class="card-text">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></p>
   </div>
 </div>
   `;

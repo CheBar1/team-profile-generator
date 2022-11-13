@@ -6,7 +6,6 @@
 * [User-Story](#user-story)
 * [Acceptance-Criteria](#acceptance-criteria)
 * [Demo](#demo)
-* [Deployment](#deployment)
 * [Installation](#require)
 * [Usage](#usage)
 * [Testing](#testing)
@@ -43,10 +42,7 @@ WHEN I decide to finish building my team<br>
 THEN I exit the application, and the HTML is generated.
 
 ## Demo
-N/A
-
-## Deployed Application URL
-N/A
+* View the [Demo]()
 
 ## Installation
 Inquirer version 8.2.4
