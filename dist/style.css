@@ -1,0 +1,14 @@
+.team-heading {
+    background-color:red;
+    color: white;
+  }
+  
+  .team-area {
+    max-width: 1000px;
+    margin: 3em auto;
+    flex-wrap: wrap;
+  }
+  
+
+  
+  

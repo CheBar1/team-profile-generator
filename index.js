@@ -1,11 +1,16 @@
+// node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require("path");
+const generateTeam = require('./scr/htmltemplate.js'); 
 
+// lib modules
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const generateFinalHtml = require('./scr/htmltemplate.js');
+
+// array for answers to questions
+const employees = [];
+
 
 // questions for the user
 function questions() {
@@ -96,7 +101,7 @@ function questions() {
           questions();
         } else {
           // if all the employees are entered the team.html is created
-          fs.writeFile('./dist/index.html', generateFinalHtml(employees), (err) => {
+          fs.writeFile('./dist/index.html', generateTeam(employees), (err) => {
             if (err) {
               return console.log(err);
             }
